@@ -5,9 +5,11 @@ import Busqueda from "../screens/Busquedas";
 import Comentarios from "../screens/Comentarios";
 import Favorito from "../screens/Favoritos";
 import TopRestaurante from "../screens/TopRestaurantes";
-import { Icon } from "react-native-elements";
+//import { Icon } from "react-native-elements";
 import RutasRestaurante from "./RutasRestaurante";
 import RutasPerfil from "./RutasPerfil";
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faMotorcycle, faSearch, faUser, faHeart, faRoad, faCommentDots } from '@fortawesome/free-solid-svg-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +28,7 @@ export default function App() {
           name="restaurantes"
           component={RutasRestaurante}
           options={{
-            title: "Restaurants",
+            title: "Novedades",
             headerShown: false,
           }}
         />
@@ -34,28 +36,28 @@ export default function App() {
         <Tab.Screen
           name="busquedas"
           component={Busqueda}
-          options={{ title: "Search" }}
+          options={{ title: "Buscar" }}
         />
         <Tab.Screen
           name="cuentas"
           component={RutasPerfil}
-          options={{ title: "Account",
+          options={{ title: "Tu cuenta",
           headerShown: false, }}
         />
         <Tab.Screen
           name="favoritos"
           component={Favorito}
-          options={{ title: "Favs" }}
+          options={{ title: "Favoritos" }}
         />
         <Tab.Screen
           name="topRestaurantes"
           component={TopRestaurante}
-          options={{ title: "Top" }}
+          options={{ title: "Rutas" }}
         />
         <Tab.Screen
           name="Comentarios"
           component={Comentarios}
-          options={{ title: "Comment" }}
+          options={{ title: "Motos" }}
         />
       </Tab.Navigator>
     </NavigationContainer>
@@ -66,24 +68,28 @@ function opciones(ruta, color) {
   let iconName;
   switch (ruta.name) {
     case "restaurantes":
-      iconName = "restaurant";
+      iconName = faCommentDots; // Icono de moto para la sección de restaurantes
       break;
     case "busquedas":
-      iconName = "search";
+      iconName = faSearch; // Icono de lupa para la sección de búsquedas
       break;
     case "cuentas":
-      iconName = "person";
+      iconName = faUser; // Icono de cuenta para la sección de cuentas
       break;
     case "favoritos":
-      iconName = "star";
+      iconName = faHeart; // Icono de corazón para la sección de favoritos
       break;
     case "topRestaurantes":
-      iconName = "check";
+      iconName = faRoad; // Icono de carretera para la sección de los mejores restaurantes
+      break;
+    case "Comentarios":
+      iconName = faMotorcycle; // Icono de comentarios para la sección de comentarios
       break;
     default:
       break;
   }
   return (
-    <Icon type="material-comunity" name={iconName} size={22} color={color} />
+    <FontAwesomeIcon icon={iconName} size={23} color={color} />
   );
 }
+

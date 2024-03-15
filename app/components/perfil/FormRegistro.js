@@ -84,7 +84,7 @@ export default function FormRegistro(toast) {
         }
       />
       <Button
-        title="Registrar"
+        title="Registrarse"
         containerStyle={styles.btnContainer}
         buttonStyle={styles.btn}
         onPress={() => onSubmit()}
@@ -113,11 +113,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   btnContainer: {
-    marginTop: 20,
+    borderRadius: 60,
+    backgroundColor:"rgb(6, 129, 234)",
+    marginTop: 15,
+    marginBottom: 10,
     width: "100%",
-  },
-  btn: {
-    backgroundColor: "#996632",
   },
   icono: {
     color: "#c1c1c1",

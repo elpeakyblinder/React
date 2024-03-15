@@ -12,21 +12,21 @@ export default function Login() {
   return (
     <ScrollView centerContent={true} style={styles.body}>
       <Image
-        source={require("../../../assets/img/cocina.png")}
+        source={require("../../../assets/loginmoto.jpg")}
         resizeMethod="auto"
         style={styles.imagen}
       />
-      <Text style={styles.titulo}>Login</Text>
+      <Text style={styles.titulo}>¡Accede a tu cuenta para disfrutar de los beneficios!</Text>
       <View styles={styles.formulario}>
         <FormLogin toastRef={toastRef} />
       </View>
       <Toast ref={toastRef} position="center" opacity={0.9} />
       <View>
-        <Text style={{ textAlign: "center" }}>
+        <Text style={{ textAlign: "center", padding: 10 }}>
           ¿No tienes cuenta?{" "}
           <Text
             style={styles.enlace}
-            onPress={() => navegacion.navigate("Signin")}
+            onPress={() => navegacion.navigate("Registrarse")}
           >
             Regístrate
           </Text>
@@ -42,24 +42,24 @@ const styles = StyleSheet.create({
     marginRight: 30,
   },
   imagen: {
-    height: 100,
-    width: 100,
+    borderRadius:130,
+    height: "35vh",
+    width: "36vh",
     alignSelf: "center",
-    marginBottom: 30,
-    marginTop: 20,
+    marginBottom: 45,
+    backgroundColor: '#fff',
   },
   titulo: {
     fontWeight: "bold",
     fontSize: 19,
-    marginBottom: 10,
+    marginBottom: 20,
     textAlign: "center",
   },
   enlace: {
-    color: "rgba(153, 102, 50, 1)",
+    color: "rgb(250, 67, 63)",
     fontWeight: "bold",
   },
   formulario: {
-    marginTop: 5,
     marginLeft: 40,
     marginRight: 40,
   },

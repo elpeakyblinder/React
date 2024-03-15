@@ -10,26 +10,23 @@ export default function Invitado() {
   return (
     <ScrollView centerContent={true} style={styles.body}>
       <Image
-        source={require("../../../assets/img/fondo.png")}
+        source={require("../../../assets/img/invitado.jpg")}
         resizeMethod="auto"
         style={styles.imagen}
       />
-      <Text style={styles.titulo}>Ingresa a tu perfil</Text>
+      <Text style={styles.titulo}>¡¡Ingresa a tu perfil para conocer nuestras novedades!!</Text>
       <Text style={styles.parrafo}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Esta app cuenta con proteccion a datos personales.
+        Ingresa para acceder a todas las funcionalidad que nuestra app ofrece!!!
       </Text>
       <View>
         <Button
-          title="Ingresar"
+          title="Acceder con tu cuenta"
           type="solid"
           buttonStyle={{
-            backgroundColor: "rgba(153, 102, 50, 1)",
+            backgroundColor: "rgb(202, 67, 63)",
+            marginBottom: 20,
+            borderRadius: 60,
           }}
           onPress={() => navegacion.navigate("Login")}
         />
@@ -45,20 +42,21 @@ const styles = StyleSheet.create({
     marginRight: 30,
   },
   imagen: {
-    height: 200,
-    width: 200,
+    borderRadius:140,
+    height: "40vh",
+    width: "40vh",
     marginBottom: 30,
     alignSelf: 'center',
-    marginTop: 20,
+    backgroundColor: '#fff',
   },
   titulo: {
     fontWeight: "bold",
-    fontSize: 19,
+    fontSize: 20,
     marginBottom: 10,
     textAlign: "center",
   },
   parrafo: {
-    textAlign: "justify",
+    textAlign: "center",
     marginBottom: 20,
   },
 });

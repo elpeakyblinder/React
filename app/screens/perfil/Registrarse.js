@@ -2,12 +2,13 @@ import React, { useRef } from "react";
 import Toast from "react-native-easy-toast";
 import { View, Text, Image, StyleSheet } from "react-native";
 import FormRegistro from "../../components/perfil/FormRegistro";
-export default function Signin() {
+
+export default function Registrarse() {
   const toastRef = useRef();
   return (
     <View centerContent={true} style={styles.body}>
       <Image
-        source={require("../../../assets/img/cocina.png")}
+        source={require("../../../assets/img/resigtromoto.jpg")}
         resizeMethod="auto"
         style={styles.imagen}
       />
@@ -25,13 +26,13 @@ const styles = StyleSheet.create({
     marginRight: 30,
   },
   imagen: {
-    height: 100,
-    width: 100,
+    height: "40vh",
+    width: "40vh",
     alignSelf: "center",
+    borderRadius: 150,
     marginBottom: 30,
     marginTop: 20,
   },
-
   formulario: {
     marginTop: 5,
     marginLeft: 40,

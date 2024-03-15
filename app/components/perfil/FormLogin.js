@@ -84,19 +84,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 10,
   },
   inputForm: {
     width: "100%",
-    marginTop: 10,
+    marginTop: 15,
   },
   btnContainer: {
-    marginTop: 10,
+    borderRadius: 60,
+    backgroundColor:"rgb(6, 129, 234)",
+    marginTop: 15,
     marginBottom: 10,
     width: "100%",
-  },
-  btn: {
-    backgroundColor: "#996632",
   },
   icono: {
     color: "#c1c1c1",

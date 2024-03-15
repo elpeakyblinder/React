@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { StyleSheet, View, Alert, Text } from "react-native";
 import { Input, Button } from "react-native-elements";
 import firebase from "firebase/compat/app";
